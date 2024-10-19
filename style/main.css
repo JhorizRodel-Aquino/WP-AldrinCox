@@ -2467,8 +2467,8 @@ header {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-rows-\[6fr_4fr\] {
-  grid-template-rows: 6fr 4fr;
+.grid-rows-\[4fr_6fr\] {
+  grid-template-rows: 4fr 6fr;
 }
 
 .flex-col {
@@ -2702,6 +2702,11 @@ header {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-\[11px\] {

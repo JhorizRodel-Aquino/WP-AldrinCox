@@ -155,7 +155,10 @@
                         <div class="swiper-slide client">
                             <h5><?php the_title()?></h5>
                             <h6><?php echo get_post_meta(get_the_ID(), "job", true)?></h6>
-                            <span><h3 class="text-primary mb-[-16px] lg:mb-[-24px]">"</h3><p><?php echo get_the_content()?></p><h3 class="text-primary">"</h3></span>
+                            <svg viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.6562 11.5H18.75V8.375C18.75 6.65137 20.1514 5.25 21.875 5.25H22.2656C22.915 5.25 23.4375 4.72754 23.4375 4.07812V1.73438C23.4375 1.08496 22.915 0.5625 22.2656 0.5625H21.875C17.5586 0.5625 14.0625 4.05859 14.0625 8.375V20.0938C14.0625 21.3877 15.1123 22.4375 16.4062 22.4375H22.6562C23.9502 22.4375 25 21.3877 25 20.0938V13.8438C25 12.5498 23.9502 11.5 22.6562 11.5ZM8.59375 11.5H4.6875V8.375C4.6875 6.65137 6.08887 5.25 7.8125 5.25H8.20312C8.85254 5.25 9.375 4.72754 9.375 4.07812V1.73438C9.375 1.08496 8.85254 0.5625 8.20312 0.5625H7.8125C3.49609 0.5625 0 4.05859 0 8.375V20.0938C0 21.3877 1.0498 22.4375 2.34375 22.4375H8.59375C9.8877 22.4375 10.9375 21.3877 10.9375 20.0938V13.8438C10.9375 12.5498 9.8877 11.5 8.59375 11.5Z" fill="#BB141B"/>
+                            </svg>
+                            <p><?php echo get_the_content()?></p>
                         </div>
 
                     <?php endwhile;
@@ -194,17 +197,17 @@
                 }
             ?>');">
 
-            <div class="homeAbout__backgroundDivider grid grid-cols-1 sm:grid-cols-[6fr_4fr] grid-rows-[6fr_4fr] sm:grid-rows-1 absolute w-full h-full z-[2]">
+            <div class="homeAbout__backgroundDivider grid grid-cols-1 sm:grid-cols-[6fr_4fr] grid-rows-[4fr_6fr] sm:grid-rows-1 absolute w-full h-full z-[2]">
                 <div class="bg-transparent"></div>
                 <div class="bg-white"></div>
             </div>
 
-            <div class="homeAbout__wrapper grid grid-cols-1 sm:grid-cols-[6fr_4fr] justify-center w-full max-w-[500px] sm:max-w-[1600px] mx-auto grid-rows-[6fr_4fr] sm:grid-rows-1">
+            <div class="homeAbout__wrapper grid grid-cols-1 sm:grid-cols-[6fr_4fr] justify-center w-full max-w-[500px] sm:max-w-[1600px] mx-auto grid-rows-[4fr_6fr] sm:grid-rows-1">
             <div
                 class="homeAbout__card col-[2_/_3] z-20 bg-white text-center py-5 px-7 sm:py-20 sm:px-10 md:py-28 md:px-16 lg:px-20 lg:py-40 xl:py-[13rem] grid gap-3 md:gap-5 lg:gap-10 row-[2_/_3]"
             >
                 <h3
-                class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-3xl font-bold"
+                class="decorative text-primary text-center lg:text-[55px] lg:leading-[55px] md:text-[40px] md:leading-[40px] text-4xl font-bold"
                 >
                 Aldrin Cox <br />
                 Visa Services LLC
@@ -278,7 +281,7 @@
 
                             <?php $gallery = new WP_Query(array(
                                 'post_type' => 'Gallery',
-                                'posts_per_page' => 12
+                                'posts_per_page' => 8
                             ))?>
                             <?php if($gallery->have_posts()) : while($gallery->have_posts()) : ($gallery->the_post())?>
                     
