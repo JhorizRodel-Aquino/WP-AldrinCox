@@ -1,12 +1,21 @@
-document.getElementById("videoPlayer").volume = 0.5;
-document.getElementById("videoThumbnail").onclick = function () {
-  document.getElementById("videoPlayer").style.display = "block";
-  document.getElementById("videoPlayer").play();
-  document.querySelector(".video-container").style.display = "none";
-};
+try {
+  const videoPlayer = document.getElementById("videoPlayer");
+  const videoThumbnail = document.getElementById("videoThumbnail");
+  const playButton = document.getElementById("play-button");
 
-document.getElementById("play-button").onclick = function () {
-  document.getElementById("videoPlayer").style.display = "block";
-  document.getElementById("videoPlayer").play();
-  document.querySelector(".video-container").style.display = "none";
-};
+  videoPlayer.volume = 0.5;
+
+  videoThumbnail.onclick = function () {
+    document.getElementById("videoPlayer").style.display = "block";
+    document.getElementById("videoPlayer").play();
+    document.querySelector(".video-container").style.display = "none";
+  };
+
+  playButton.onclick = function () {
+    document.getElementById("videoPlayer").style.display = "block";
+    document.getElementById("videoPlayer").play();
+    document.querySelector(".video-container").style.display = "none";
+  };
+} catch (error) {
+  console.log("");
+}

@@ -18,6 +18,8 @@
         <div
           class="homeBanner__wrapper relative z-10 flex-col h-[100dvh] flex justify-center items-center text-white gap-7 lg:gap-9 text-center w-[700px] max-w-[100%] mx-auto"
         >
+        <div class="homeBanner__title grid justify-items-center items-center lg:gap-3 text-shadow">
+            <h4 class="pb-[6px]"><?php echo get_bloginfo('description')?></h4>
             <?php echo get_the_content();?>
             <a class="btn bg-prmry" href="<?php echo site_url('/services/#order')?>">Inquire Now</a>
         </div>
@@ -232,10 +234,10 @@
         </section>
 
         <?php endwhile;
-        else : 
-            echo "";
-        endif;
-        wp_reset_postdata();
+            else : 
+                echo "";
+            endif;
+            wp_reset_postdata();
         ?>
 
         <hr />

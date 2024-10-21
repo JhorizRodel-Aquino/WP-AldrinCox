@@ -27,6 +27,7 @@
 			id="name"
 			name="name"
 			placeholder="Full Name"
+			autocomplete="on"
 			/>
 			<input
 			class="required"
@@ -34,6 +35,7 @@
 			id="email"
 			name="email"
 			placeholder="Email Address"
+			autocomplete="on"
 			/>
 		</div>
 

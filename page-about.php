@@ -70,10 +70,10 @@
     </section>
 
     <?php endwhile;
-    else : 
-        echo "No more posts 🙁";
-    endif;
-    wp_reset_postdata();
+        else : 
+            echo "No more posts 🙁";
+        endif;
+        wp_reset_postdata();
     ?>
 
 

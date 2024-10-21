@@ -99,77 +99,77 @@
 	))?>
 	<?php if($order->have_posts()) : while($order->have_posts()) : ($order->the_post())?>
 
-		<section class="servicesOrder bg-cover bg-fixed bg-no-repeat py-10 lg:py-20" 
-		style="background-image: url('<?php 
-				$featured_image_url = get_the_post_thumbnail_url(get_the_ID()); 
-				if ($featured_image_url) {
-				echo esc_url($featured_image_url);
-				}
-			?>');"
-		id="order">
-		<div class="container">
-			<h3
-			class="bg-primary lg:py-8 py-4 text-center w-full md:w-[70%] mx-auto max-w-[500px] md:max-w-[1600px] text-white"
-			>
-			Order Inquiry
-			</h3>
-			<div
-			class="servicesOrder__wrapper p-5 pb-16 md:p-14 grid items-center justify-items-center bg-white w-full max-w-[500px] md:max-w-[1600px] md:w-[70%] mx-auto relative gap-5 md:pb-28 md:gap-7 lg:grid-cols-2 lg:pb-14 lg:px-18"
-			>
-			<div class="servicesOrder__form grid gap-5 w-full max-w-[25rem]">
-				<div>
-				<form class="servicesOrder__info grid gap-7">
-					<input type="text" id="name" placeholder="Full Name" />
-					<input type="email" id="email" placeholder="Email Address" />
-					<input type="url" id="facebook" placeholder="Facebook Link" />
-					<button
-					type="submit"
-					class="btn frms shadow-none absolute bottom-5 md:bottom-14 lg:static"
-					onclick="inquire(event)"
-					>
-					Send Inquiry
-					</button>
-				</form>
-				</div>
-			</div>
-			<div
-				class="servicesOrder__offered grid md:grid-cols-3 justify-center text-center gap-5 lg:gap-3 pb-5"
-			>
-
-				<?php $service = new WP_Query(array (
-				'post_type' => 'Services',
-				'posts_per_page' => -1,
-				'order' => "ASC"
-				))?>
-
-				<?php if($service->have_posts()) : while($service->have_posts()) : $service->the_post()?>
-				<label class="font-semibold" for="<?php echo get_post_meta(get_the_ID(), 'id', true);?>">
-				<img src="<?php echo get_template_directory_uri()?>/icons/<?php echo get_post_meta(get_the_ID(), "icon", true)?>" alt="">
-				<?php echo str_replace("Assistance", "", get_the_title()) ?></h4>
-				<input
-					type="checkbox"
-					id="<?php echo get_post_meta(get_the_ID(), 'id', true);?>"
-					class="h-[12px] w-[12px] lg:h-[20px] lg:w-[20px] border-2 border-black"
-				/>
-				</label>
-
-				<?php endwhile;
-				else:
-					echo "";
-				endif;
-					wp_reset_postdata();
-				?>
-
-			</div>
+	<section class="servicesOrder bg-cover bg-fixed bg-no-repeat py-10 lg:py-20" 
+	style="background-image: url('<?php 
+			$featured_image_url = get_the_post_thumbnail_url(get_the_ID()); 
+			if ($featured_image_url) {
+			echo esc_url($featured_image_url);
+			}
+		?>');"
+	id="order">
+	<div class="container">
+		<h3
+		class="bg-primary lg:py-8 py-4 text-center w-full md:w-[70%] mx-auto max-w-[500px] md:max-w-[1600px] text-white"
+		>
+		Order Inquiry
+		</h3>
+		<div
+		class="servicesOrder__wrapper p-5 pb-16 md:p-14 grid items-center justify-items-center bg-white w-full max-w-[500px] md:max-w-[1600px] md:w-[70%] mx-auto relative gap-5 md:pb-28 md:gap-7 lg:grid-cols-2 lg:pb-14 lg:px-18"
+		>
+		<div class="servicesOrder__form grid gap-5 w-full max-w-[25rem]">
+			<div>
+			<form class="servicesOrder__info grid gap-7">
+				<input type="text" id="name" placeholder="Full Name" autocomplete="on" />
+				<input type="email" id="email" placeholder="Email Address" autocomplete="on" />
+				<input type="url" id="facebook" placeholder="Facebook Link" />
+				<button
+				type="submit"
+				class="btn frms shadow-none absolute bottom-5 md:bottom-14 lg:static"
+				onclick="inquire(event)"
+				>
+				Send Inquiry
+				</button>
+			</form>
 			</div>
 		</div>
-		</section>
+		<div
+			class="servicesOrder__offered grid md:grid-cols-3 justify-center text-center gap-5 lg:gap-3 pb-5"
+		>
+
+			<?php $service = new WP_Query(array (
+			'post_type' => 'Services',
+			'posts_per_page' => -1,
+			'order' => "ASC"
+			))?>
+
+			<?php if($service->have_posts()) : while($service->have_posts()) : $service->the_post()?>
+			<label class="font-semibold" for="<?php echo get_post_meta(get_the_ID(), 'id', true);?>">
+			<img src="<?php echo get_template_directory_uri()?>/icons/<?php echo get_post_meta(get_the_ID(), "icon", true)?>" alt="">
+			<?php echo str_replace("Assistance", "", get_the_title()) ?></h4>
+			<input
+				type="checkbox"
+				id="<?php echo get_post_meta(get_the_ID(), 'id', true);?>"
+				class="h-[12px] w-[12px] lg:h-[20px] lg:w-[20px] border-2 border-black"
+			/>
+			</label>
+
+			<?php endwhile;
+			else:
+				echo "";
+			endif;
+				wp_reset_postdata();
+			?>
+
+		</div>
+		</div>
+	</div>
+	</section>
 
 	<?php endwhile;
-	else:
-		echo "";
-	endif;
-	wp_reset_postdata();
+		else:
+			echo "";
+		endif;
+		wp_reset_postdata();
 	?>
 
 <?php get_footer()?>

@@ -2580,10 +2580,6 @@ header {
   background-image: url("../img/CTA.png");
 }
 
-.bg-\[url\(\'\.\.\/img\/banner1\.png\'\)\] {
-  background-image: url("../img/banner1.png");
-}
-
 .bg-\[url\(\'\.\.\/img\/banner_about\.png\'\)\] {
   background-image: url("../img/banner_about.png");
 }
