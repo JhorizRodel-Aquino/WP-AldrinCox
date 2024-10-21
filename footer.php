@@ -1,4 +1,4 @@
-    <footer class="footer bg-black text-white text-center py-9 lg:py-18 z-10">
+    <footer class="footer bg-black text-white text-center py-9 lg:py-18 z-10 relative">
       <div class="container">
         <div
           class="footer__wrapper flex flex-col-reverse max-w-[250px] mx-auto gap-12 items-center lg:flex-row lg:justify-between lg:max-w-full lg:gap-0"
@@ -117,6 +117,8 @@
             ))?>
           </ul>
         </div>
+
+        <h6>Designed & Developed by: Jhoriz & Kinlie</h6>
       </div>
     </footer>
 
