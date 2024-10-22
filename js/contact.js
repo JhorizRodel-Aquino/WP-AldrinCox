@@ -23,7 +23,7 @@ function sendMail(event) {
 
   // Send the email using EmailJS
   emailjs
-    .send("service_lhb8138", "template_ctg811p", parms)
+    .send("service_q3eivre", "template_uwauio4", parms)
     .then(() => alert("Email successfully sent!"))
     .catch((error) => console.error("Error sending email:", error));
 }

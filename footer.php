@@ -14,7 +14,7 @@
             <p>Copyright © 2024 Aldrin Cox <br> Visa Services LLC.</p>
             <ul class="footer__socials flex gap-6">
               <li>
-                <a href="<?php echo get_post_meta(84, "facebook", true)?>">
+                <a href="<?php echo get_post_meta(84, "facebook1", true)?>" target="_blank" >
                   <svg
                   width="15"
                   height="26"
@@ -30,7 +30,7 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo get_post_meta(84, "instagram", true)?>">
+                <a href="<?php echo get_post_meta(84, "instagram", true)?>" target="_blank" >
                   <svg
                     width="23"
                     height="22"
@@ -61,6 +61,22 @@
                   </svg>
                 </a>
               </li>
+              <li>
+                <a href="<?php echo get_post_meta(84, "facebook2", true)?>" target="_blank" >
+                  <svg
+                  width="15"
+                  height="26"
+                  viewBox="0 0 15 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.3169 14.5078L14.0112 9.9834H9.66992V7.04736C9.66992 5.80957 10.2764 4.60303 12.2207 4.60303H14.1943V0.750977C14.1943 0.750977 12.4033 0.445312 10.6909 0.445312C7.11572 0.445312 4.77881 2.6123 4.77881 6.53516V9.9834H0.804688V14.5078H4.77881V25.4453H9.66992V14.5078H13.3169Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -80,11 +96,11 @@
               />
             </svg>
             <div>
-              <a href="tel:<?php echo get_post_meta(84, "phone1", true)?>">
-                <p><?php echo get_post_meta(84, "phone1", true)?></p>
+              <a href="tel:<?php echo get_post_meta(84, "USA", true)?>">
+                <p>USA &nbsp <?php echo get_post_meta(84, "USA", true)?></p>
               </a>
-              <a href="tel:<?php echo get_post_meta(84, "phone2", true)?>">
-                <p><?php echo get_post_meta(84, "phone2", true)?></p>
+              <a href="tel:<?php echo get_post_meta(84, "PH", true)?>">
+                <p>PH &nbsp <?php echo get_post_meta(84, "PH", true)?></p>
               </a>
             </div>
           </div>
